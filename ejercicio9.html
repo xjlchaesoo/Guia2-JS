@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+</head>
+<body>
+    <label for="">Nota 1</label>
+    <input type="text" name="nota1" id="nota1"><br>
+    <label for="">Nota 2</label>
+    <input type="text" name="nota2" id="nota2"><br>
+    <button onclick="calcular()">Calcular</button><br>
+    <label for="" id="resultado"></label>
+    <script>
+        function calcular(params) {
+            let nota1 = document.getElementById('nota1').value;
+            let nota2 = document.getElementById('nota2').value;
+
+            nota1 = nota1 * 0.3;
+            nota2 = nota2 * 0.7;
+
+            let notafinal = nota1 + nota2;
+            document.getElementById("resultado").innerHTML = notafinal.toFixed(2);
+        }
+    </script>
+</body>
+</html>

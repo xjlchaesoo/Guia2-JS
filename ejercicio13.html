@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 13</title>
+</head>
+<body>
+    <H1>Convertir grados Celcius a Fahrenheit</H1>
+    Temperatura en Celcius:<input type="text" name="tempCelcius" id="tempCelcius"><br>
+    <input type="button" name="button1" value="CONVERTIR" onclick="primeraFuncion()"><br>
+    Fahrenheit:<label for="" name="resultado" id="resultado"></label><br><br>
+    <h2>Segunda funcion</h2>
+    <label for="" name="resultado" id="resultado2"></label>
+    <script>
+        function primeraFuncion(params) {
+            let  tempCelc = document.getElementById('tempCelcius').value;
+            conver = (tempCelc * 1.8) + 32
+            document.getElementById("resultado").innerHTML = conver;
+        }
+        function segundaFuncion(temp) {
+            if(temp >=14 && temp <= 32){
+                document.getElementById("resultado2").innerHTML = temp + " ºF";
+                document.write("Temperatura baja")
+            }
+            if(temp >=33 && temp <= 68){
+                document.getElementById("resultado2").innerHTML = temp + " ºF";
+                document.write("Temperatura adecuada")
+            }
+            if(temp >=69 && temp <= 96){
+                document.getElementById("resultado2").innerHTML = temp + " ºF";
+                document.write("Temperatura alta")
+            }
+            if(temp >96){
+                document.getElementById("resultado2").innerHTML = temp + " ºF";
+                document.write("Temperatura desconocida")
+            }
+        }
+        segundaFuncion(559)
+        
+    </script>
+    <h3>Tercera funcion</h2>
+    
+    Temperatura en Fahrenheit:<input type="text" name="temFahr" id="temFahr"><br>
+    <input type="button" name="button2" value="CONVERTIR" onclick="terceraFuncion()"><br>
+    <label for="" name="resultado3" id="resultado3"></label>
+    <script>
+        function terceraFuncion(params) {
+            let  tempFahrenheit = document.getElementById('temFahr').value;
+            converF = (tempFahrenheit -32) / 1.8
+            document.getElementById("resultado3").innerHTML = converF.toFixed(2) + "ºC";
+        }
+    </script>
+
+</body>
+</html>

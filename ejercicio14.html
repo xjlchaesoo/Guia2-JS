@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var miArray = new Array();
+
+            // bucle del 1 al 5
+            for (var i = 1; i <= 3; i++) {
+                var name = prompt("Introduce un numero");
+                miArray.push(name);
+            }
+            document.write("Valores ingresados: " + miArray);
+            document.write('<br>');
+            let negativos = 0;
+            miArray.forEach(num => {
+                if (num < 0) negativos++;
+            });
+            document.writeln("Cantidad de numeros negativos ingresados: " + negativos);
+            document.write('<br>');
+            let positivos = 0;
+            miArray.forEach(num => {
+                if (num > 0) positivos++;
+            });
+            document.writeln("Cantidad de numeros positivos ingresados: " + positivos);
+            document.write('<br>');
+            let multiplos = 0;
+            miArray.forEach(num => {
+                if (num > 0 && num % 15 == 0) {
+                    multiplos++;
+                    document.writeln("El número " + num + " es múltiplo de 15")
+                    document.write('<br>');
+                }
+            });
+            document.writeln("Cantidad de numeros multiplos de 15: " + multiplos);
+
+
+            let sumatoria = 0
+            miArray.forEach(num => {
+                if (num % 2 == 0) {
+                    sumatoria = sumatoria + num;
+                }
+            });
+            document.write('<br>');
+            document.writeln("La sumatoria de los numeros pares es: " + sumatoria);
+    </script>
+    
+
+  </body>
+</html>
